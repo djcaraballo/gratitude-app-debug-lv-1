@@ -7,9 +7,9 @@ const NoteCard = ({ id, sender, recipient, date, note, deleteNote }) => {
       <h2 className="greeting">Dear {recipient},</h2>
       <p>{note}</p>
       <h2>- {sender}</h2>
-      <button onClick={() => deleteNote(id)}>Delete Note</button>
+      <button>Delete Note</button>
     </div>
   )
 }
 
-export default NoteCard
+export NoteCard

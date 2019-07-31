@@ -6,13 +6,12 @@ import './App.css'
 
 class App extends Component {
   constructor() {
-    super()
     this.state = {
       notes: []
     }
   }
 
-  addNote = (note) => {
+  addNote(note) {
     const { notes } = this.state
     const newNote = {...note, id: Date.now()}
     const newNotes = [newNote, ...notes]
@@ -21,7 +20,7 @@ class App extends Component {
     })
   }
 
-  deleteNote = (id) => {
+  deleteNote(id) {
     const { notes } = this.state
     const newNotes = notes.filter(note => note.id !== id)
     this.setState({
@@ -36,12 +35,10 @@ class App extends Component {
     <div className="App">
       <h1>Thank you, very much!</h1>
       <GratitudeForm addNote={this.addNote}/>
-      <NoteContainer notes={notes} deleteNote={this.deleteNote}/>
+      <NoteContainer />
     </div>
     )
   }
 }
 
 export default App;
-
-// remove super from constructor

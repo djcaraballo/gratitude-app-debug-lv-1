@@ -1,14 +1,12 @@
 import React from 'react'
 
-import NoteCard from './NoteCard'
-
 const NoteContainer = ({ notes, deleteNote }) => {
   const displayedNotes = notes.map(note => {
-    return <NoteCard
-            key={note.id}
-            deleteNote={deleteNote}
-            {...note}
-            />
+     <NoteCard
+      key={note.id}
+      deleteNote={deleteNote}
+      {...note}
+      />
   })
 
   return(
@@ -19,5 +17,3 @@ const NoteContainer = ({ notes, deleteNote }) => {
 }
 
 export default NoteContainer
-
-// remove return statement from map

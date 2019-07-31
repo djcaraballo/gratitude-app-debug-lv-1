@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class GratitudeForm extends Component {
+export class GratitudeForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -39,7 +39,7 @@ export default class GratitudeForm extends Component {
         <input
           className="form-input"
           name="sender"
-          value={sender}
+          value="sender"
           placeholder="Enter sender's name"
           onChange={this.handleChange} />
         <label htmlFor="recipient">To: </label>
@@ -53,14 +53,14 @@ export default class GratitudeForm extends Component {
         <input
           className="form-input"
           name="date"
-          value={date}
+          value="date"
           type="date"
           onChange={this.handleChange}/>
         <label htmlFor="note">Note: </label>
         <input
           className="form-input note-input"
           name="note"
-          value={note}
+          value="note"
           placeholder="What are you grateful for?"
           onChange={this.handleChange}/>
         <button>Post Note!</button>
@@ -68,8 +68,3 @@ export default class GratitudeForm extends Component {
     )
   }
 }
-
-
-// turn this into a named class upon export by removing default
-// remove component from imports
-// link value of inputs to a string that says the name
